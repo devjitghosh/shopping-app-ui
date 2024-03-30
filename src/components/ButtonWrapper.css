@@ -1,0 +1,22 @@
+.button-wrapper {
+    font-family: Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(207, 221, 233);
+    background: rgb(35, 98, 187);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.button-wrapper:hover, .button-wrapper:focus, .button-wrapper:active {
+    box-shadow: 0 0 8px rgba(128, 128, 128, 0.25);
+    background: rgb(48, 121, 224);
+    color: rgb(229, 235, 239);
+    transform: scale(1.1);
+
+}

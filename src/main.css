@@ -1,0 +1,14 @@
+html {
+  background-color: rgb(20, 20, 20);
+  font-family: Helvetica, sans-serif;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  
+}
+
+p {
+  margin: 0px;
+}

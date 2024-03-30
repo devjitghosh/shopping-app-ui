@@ -1,0 +1,53 @@
+#filter-price {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* align-items: center;
+    justify-content: end; */
+  }
+  .price-range-title {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .horizontal-slider{
+    /* background: rgb(255, 0, 0); */
+    height: 30px;
+    /* background: red; */
+    
+  }
+  .horizontal-slider .example-track {
+    top: 20px;
+    height: 10px;
+    border-radius: 5px;
+  }
+  /* .example-track {
+    background: rgb(221, 221, 221);
+  } */
+  .example-track.example-track-1 {
+    background: rgb(48, 121, 224);
+  }
+  .example-track {
+    background: rgb(221, 221, 221);
+  }
+  .horizontal-slider .example-thumb {
+    top: 1px;
+    width: 30px;
+    height: 20px;
+    line-height: 20px;
+  }
+  .example-thumb {
+    font-size: 12px;
+    text-align: center;
+    background-color: rgb(78, 78, 78);
+    color: white;
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    /* box-sizing: border-box; */
+  }
