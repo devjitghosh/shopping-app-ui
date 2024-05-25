@@ -1,6 +1,5 @@
 import "./App.css";
 import Product from "./components/Product";
-// import dummyProducts from "./data/dummyProducts";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
