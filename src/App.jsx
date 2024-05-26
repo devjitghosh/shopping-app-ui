@@ -9,6 +9,7 @@ import PriceRange from "./components/filters/PriceRange";
 function App() {
   const [cart, setCart] = useState({});
   const [products, setProducts] = useState([]);
+  const [isProductLoading, setIsProductLoading] = useState(true);
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
         `http://localhost:3000/items?price[gte]=${priceRange[0]}&price[lte]=${priceRange[1]}`
       );
       setProducts(itemsData.data.body.items);
+      setIsProductLoading(false);
     }
     getItems();
   }, []);
@@ -59,26 +61,34 @@ function App() {
     setProducts(itemsData.data.body.items);
   };
   return (
-    <div id="main-page">
-      <div id="filter-section">
-        <PriceRange priceRangeHandler={setPriceRangeHandler} />
-        <div id="filter-button">
-          <ButtonWrapper clickHandler={filterHandler}>FILTER</ButtonWrapper>
+    <div id="whole-page">
+      {/* <div id="header"> */}
+      <Header cart={cart} setCart={setCart}></Header>
+      {/* </div> */}
+      <div id="main-page">
+        <div id="filter-section">
+          <PriceRange priceRangeHandler={setPriceRangeHandler} />
+          <div id="filter-button">
+            <ButtonWrapper clickHandler={filterHandler}>FILTER</ButtonWrapper>
+          </div>
         </div>
-      </div>
-      <div id="main-section">
-        <Header cart={cart} setCart={setCart}></Header>
-        <div id="main-card">
-          {products.length ? (
-            products.map((item) => (
-              <Product
-                product={item}
-                key={item._id}
-                addItemToCart={addItemToCartHandler}
-              />
-            ))
+        <div id="main-section">
+          {isProductLoading ? (
+            <p className="fallback-text"> PRODUCTS ARE LOADING !!!</p>
           ) : (
-            <p>No Items Found!</p>
+            <div id="main-card">
+              {products.length ? (
+                products.map((item) => (
+                  <Product
+                    product={item}
+                    key={item._id}
+                    addItemToCart={addItemToCartHandler}
+                  />
+                ))
+              ) : (
+                <p className="fallback-text">No Items Found!</p>
+              )}
+            </div>
           )}
         </div>
       </div>
