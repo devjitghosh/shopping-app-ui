@@ -1,5 +1,5 @@
 #header {
-  height: 70px;
+  height: 50px;
   background-color: rgb(32, 32, 32);
   border-radius: 15px;
   display: flex;
@@ -7,32 +7,41 @@
   /* justify-content: center; */
   align-items: center;
   padding: 0px 30px;
+
+  margin: 10px 20px 0px 20px;
+  position: fixed;
+  top: 0; /* Fixes the header at the top */
+  left: 0; /* Aligns the header to the left edge */
+  right: 0; /*Aligns the header to the right edge */
+  z-index: 1000;
+  box-shadow: 0px 0px 10px 20px rgb(20, 20, 20);
 }
 
-.cart-icon {
-  height: 40px;
-  
-}
+/* .cart-icon {
+  height: 10%;
+} */
 
 #counter {
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    border: 3px solid white;
-    font-family: Helvetica, sans-serif;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    background: rgb(48, 121, 224);
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-family: Helvetica, sans-serif;
+  font-size: small;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(48, 121, 224);
 }
 
 #complete-cart {
-    display: flex;
-    margin-right: 20px;
-    /* align-items: end; */
+  display: flex;
+  margin-right: 20px;
+  height: 70%;
+  /* align-items: end; */
 }
 
 .logo {
-    height: 80%;
+  height: 70%;
 }
