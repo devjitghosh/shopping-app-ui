@@ -1,46 +1,45 @@
 .product {
-    /* width: 200px; */
-    height: 350px;
-    background-color: rgb(40, 40, 40);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+  min-width: 165px;
+  height: 350px;
+  background-color: rgb(40, 40, 40);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
 }
 
 .info {
-    background-color: rgb(46, 46, 46);
-    border-radius:0px 0px 15px 15px;
-    height: 25%;
-    width: 100%;
-    justify-self: end;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* gap: 10px; */
-    font-size: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    flex-direction: column;
+  background-color: rgb(46, 46, 46);
+  border-radius: 0px 0px 15px 15px;
+  height: 25%;
+  width: 100%;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* gap: 10px; */
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  flex-direction: column;
 
-    /* padding: 5px; */
-
+  /* padding: 5px; */
 }
 
 .info > div {
-    /* background-color: blue; */
-    /* flex-shrink: 1; */
-    display: flex;
-    /* flex-direction: column; */
-    gap: 10px;
-    align-items: flex-start;
-    justify-content: center;
+  /* background-color: blue; */
+  /* flex-shrink: 1; */
+  display: flex;
+  /* flex-direction: column; */
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .product-image {
-    height: 100%;
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
 }
 
 /* .add-to-cart {
@@ -48,16 +47,16 @@
 } */
 
 .product-info {
-    color: rgb(191, 190, 190);
+  color: rgb(191, 190, 190);
 }
 
 .price {
-    font-weight: 650;
+  font-weight: 650;
 }
 
-.price-addtocart{
-    display: flex;
-    align-items: center;
-    width: 80%;
-    justify-content: space-around;
+.price-addtocart {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-around;
 }
