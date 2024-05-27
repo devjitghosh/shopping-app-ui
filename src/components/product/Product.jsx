@@ -1,9 +1,9 @@
 import "./Product.css";
-import ButtonWrapper from "./ButtonWrapper";
+import ButtonWrapper from "../ButtonWrapper";
 const Product = ({ product, addItemToCart }) => {
   const pid = product._id;
   return (
-    <div className="product">
+    <li className="product">
       <img
         className="product-image"
         src={`http://localhost:3000/${pid}/tn.webp`}
@@ -23,7 +23,7 @@ const Product = ({ product, addItemToCart }) => {
           </ButtonWrapper>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 

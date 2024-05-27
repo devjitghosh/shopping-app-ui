@@ -1,0 +1,10 @@
+#filter-section {
+  height: 100vh;
+  background-color: rgb(30, 30, 30);
+  border-radius: 20px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}

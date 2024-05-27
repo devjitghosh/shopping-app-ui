@@ -1,9 +1,9 @@
 import { useRef, forwardRef, useEffect, useState } from "react";
 import "./CartModal.css";
 import { createPortal } from "react-dom";
-import ButtonWrapper from "./ButtonWrapper";
+import ButtonWrapper from "../ButtonWrapper";
 import axios from "axios";
-import deleteIcon from "../assets/deleteicon.png";
+import deleteIcon from "../../assets/deleteicon.png";
 import RemoveItemModal from "./RemoveItemModal";
 
 const CartModal = forwardRef(function CartModal({ cart, setCart }, ref) {

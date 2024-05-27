@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import ButtonWrapper from "./ButtonWrapper";
+import ButtonWrapper from "../ButtonWrapper";
 import "./RemoveItemModal.css"; // Import CSS file
 
 const RemoveItemModal = forwardRef(({ id, deleteItemHandler }, ref) => {

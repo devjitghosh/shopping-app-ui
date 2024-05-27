@@ -1,10 +1,9 @@
 import "./App.css";
-import Product from "./components/Product";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ButtonWrapper from "./components/ButtonWrapper";
-import PriceRange from "./components/filters/PriceRange";
+import Filters from "./components/filters/Filters";
+import ProductList from "./components/product/ProductList";
 
 function App() {
   const [cart, setCart] = useState({});
@@ -62,34 +61,18 @@ function App() {
   };
   return (
     <div id="whole-page">
-      {/* <div id="header"> */}
       <Header cart={cart} setCart={setCart}></Header>
-      {/* </div> */}
       <div id="main-page">
-        <div id="filter-section">
-          <PriceRange priceRangeHandler={setPriceRangeHandler} />
-          <div id="filter-button">
-            <ButtonWrapper clickHandler={filterHandler}>FILTER</ButtonWrapper>
-          </div>
-        </div>
+        <Filters
+          setPriceRangeHandler={setPriceRangeHandler}
+          filterHandler={filterHandler}
+        />
         <div id="main-section">
-          {isProductLoading ? (
-            <p className="fallback-text"> PRODUCTS ARE LOADING !!!</p>
-          ) : (
-            <div id="main-card">
-              {products.length ? (
-                products.map((item) => (
-                  <Product
-                    product={item}
-                    key={item._id}
-                    addItemToCart={addItemToCartHandler}
-                  />
-                ))
-              ) : (
-                <p className="fallback-text">No Items Found!</p>
-              )}
-            </div>
-          )}
+          <ProductList
+            products={products}
+            addItemToCartHandler={addItemToCartHandler}
+            isLoading={isProductLoading}
+          />
         </div>
       </div>
     </div>
