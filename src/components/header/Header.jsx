@@ -11,7 +11,7 @@ const Header = ({ cart, setCart }) => {
   for (let id in cart) {
     count += cart[id];
   }
-  const clickHandler = (evnt) => {
+  const clickHandler = (event) => {
     modal.current.showModal();
   };
   return (
