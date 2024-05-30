@@ -14,7 +14,8 @@
   left: 0; /* Aligns the header to the left edge */
   right: 0; /*Aligns the header to the right edge */
   z-index: 1000;
-  box-shadow: 0px 0px 10px 20px rgb(20, 20, 20);
+  box-shadow: 0px 0px 0px 12px rgb(20, 20, 20);
+  /* background: rgb(20, 20, 20); */
 }
 
 /* .cart-icon {
