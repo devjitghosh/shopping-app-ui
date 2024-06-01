@@ -4,33 +4,36 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Filters from "./components/filters/Filters";
 import ProductList from "./components/product/ProductList";
+import useFetch from "./customhooks/useFetch";
 
 function App() {
-  const [cart, setCart] = useState({});
-  const [products, setProducts] = useState([]);
-  const [isProductLoading, setIsProductLoading] = useState(true);
   const [priceRange, setPriceRange] = useState([0, 1000]);
 
-  useEffect(() => {
-    async function getItems() {
-      const itemsData = await axios.get(
-        `http://localhost:3000/items?price[gte]=${priceRange[0]}&price[lte]=${priceRange[1]}`
-      );
-      setProducts(itemsData.data.body.items);
-      setIsProductLoading(false);
-    }
-    getItems();
-  }, []);
+  const {
+    data: products,
+    setData: setProducts,
+    isDataLoading: isProductLoading,
+    setIsDataLoading: setIsProductLoading,
+  } = useFetch(async () => {
+    const itemsData = await axios.get(
+      `http://localhost:3000/items?price[gte]=${priceRange[0]}&price[lte]=${priceRange[1]}`
+    );
+    setProducts(itemsData.data.body.items);
+    setIsProductLoading(false);
+  });
 
-  useEffect(() => {
-    async function getCartItems() {
-      const cartItemsData = await axios.get(
-        "http://localhost:3000/cart-items?username=abc@def.com"
-      );
-      setCart(cartItemsData.data.body.products);
-    }
-    getCartItems();
-  }, []);
+  const {
+    data: cart,
+    setData: setCart,
+    isDataLoading: isCartLoading,
+    setIsDataLoading: setIsCartLoading,
+  } = useFetch(async () => {
+    const cartItemsData = await axios.get(
+      "http://localhost:3000/cart-items?username=abc@def.com"
+    );
+    setCart(cartItemsData.data.body.products);
+    setIsCartLoading(false);
+  });
 
   const addItemToCartHandler = async (id) => {
     setCart((previousCart) => {
