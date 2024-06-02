@@ -7,4 +7,6 @@
   flex-direction: column;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
+  min-width: 200px;
+  padding-top: 30px;
 }

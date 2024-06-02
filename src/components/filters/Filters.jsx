@@ -6,7 +6,7 @@ function Filters({ setPriceRangeHandler, filterHandler }) {
     <div id="filter-section">
       <PriceRange priceRangeHandler={setPriceRangeHandler} />
       <div id="filter-button">
-        <ButtonWrapper clickHandler={filterHandler}>FILTER</ButtonWrapper>
+        <ButtonWrapper clickHandler={filterHandler}>Filter</ButtonWrapper>
       </div>
     </div>
   );

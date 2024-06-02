@@ -10,16 +10,17 @@ const Product = ({ product, addItemToCart }) => {
         alt={`image of tshirt ${pid}`}
       ></img>
       <div className="info">
-        <div>
-          <p className="product-info">{product.name}</p>
-        </div>
+        <div className="product-name">{product.name}</div>
         <div className="price-addtocart">
-          <p className="product-info price">Rs: {product.price}</p>
+          <div className="price">
+            <span style={{ fontSize: "small" }}>₹ </span>
+            {product.price}
+          </div>
           <ButtonWrapper
-            className="add-to-cart"
+            customClassName="add-to-cart"
             clickHandler={(event) => addItemToCart(pid)}
           >
-            Add To Cart
+            {"🛒 Add To Cart"}
           </ButtonWrapper>
         </div>
       </div>
