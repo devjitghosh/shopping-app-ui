@@ -3,6 +3,7 @@ import cartIcon from "../../assets/cart-icon.png";
 import logo from "../../assets/cotton-brandy.png";
 import { useRef } from "react";
 import CartModal from "./CartModal";
+import NavigationBar from "./NavigationBar";
 
 const Header = ({ cart, setCart }) => {
   const modal = useRef();
@@ -18,6 +19,7 @@ const Header = ({ cart, setCart }) => {
     <div id="header">
       {/* <p>{JSON.stringify(cart)}</p> */}
       <img className="logo" src={logo}></img>
+      <NavigationBar />
       <div id="complete-cart">
         <CartModal ref={modal} cart={cart} setCart={setCart} />
 

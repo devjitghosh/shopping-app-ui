@@ -1,0 +1,26 @@
+#navigation-bar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  /* align-self: flex-start; */
+}
+
+#navigation-bar ul li a {
+  text-decoration: none;
+  font-size: large;
+  color: rgb(224, 224, 224);
+}
+
+#navigation-bar ul li a:hover,
+#navigation-bar ul li a.active-nav {
+  color: rgb(46, 133, 255);
+}
+
+/* #navigation-bar ul li a {
+  text-decoration: none;
+  font-size: large;
+  color: rgb(224, 224, 224);
+}
+#navigation-bar a {
+  color: rgb(227, 135, 135);
+} */
