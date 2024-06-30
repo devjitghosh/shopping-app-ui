@@ -1,10 +1,14 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import ProductsPage from "./pages/ProductsPage";
 import HomePage from "./pages/HomePage";
-import ProductDetailsPage from "./pages/ProductDetailsPage";
+import ProductDetailsPage, {
+  productReviewLoader,
+  sumbitReviewAction,
+} from "./pages/ProductDetailsPage";
 import MainLayout from "./pages/MainLayout";
 import useFetch from "./customhooks/useFetch";
 import axios from "axios";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const {
@@ -43,10 +47,16 @@ function App() {
     {
       path: "/",
       element: <MainLayout cart={cart} setCart={setCart} />,
+      errorElement: <ErrorPage />,
       children: [
         { index: true, element: <HomePage /> },
         { path: "/products", element: <ProductsPage setCart={setCart} /> },
-        { path: "/products/:productId", element: <ProductDetailsPage /> },
+        {
+          path: "/products/:productId",
+          element: <ProductDetailsPage />,
+          loader: productReviewLoader,
+          action: sumbitReviewAction,
+        },
       ],
     },
   ]);

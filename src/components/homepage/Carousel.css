@@ -1,0 +1,15 @@
+.embla {
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0px 350px 0px 350px;
+  width: 720px;
+}
+
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  /* width: 200px; */
+}
