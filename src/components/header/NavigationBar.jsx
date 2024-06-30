@@ -22,15 +22,6 @@ function NavigationBar() {
             products
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/products/1"
-            className={({ isActive }) => (isActive ? "active-nav" : "")}
-            end
-          >
-            product
-          </NavLink>
-        </li>
       </ul>
     </nav>
   );
