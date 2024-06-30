@@ -80,7 +80,7 @@ export async function productReviewLoader({ request, params }) {
   const { productId } = params;
   try {
     const reviewData = await axios.get(
-      `http://localhost:3000/item/reviewss/${productId}`
+      `http://localhost:3000/item/reviews/${productId}`
     );
     return reviewData.data.reviews;
   } catch (error) {
